@@ -9,6 +9,7 @@ platform:
 install:
   - cmd: SET PATH=C:\\Python%PYTHON%;c:\\Python%PYTHON%\\scripts;%PATH%
   - ps: git -c advice.detachedHead=false clone -q -b 1.11.6 https://github.com/django/django C:\projects\django
+  - ps: pip install django
 
 build: off
 
