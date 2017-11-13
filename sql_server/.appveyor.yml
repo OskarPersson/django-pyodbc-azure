@@ -14,4 +14,4 @@ test:
   - cmd: cd C:\projects\django\tests
   - cmd: python runtests.py --settings=sql_server.settings expressions -v2
 
-build: off
+#build: off
