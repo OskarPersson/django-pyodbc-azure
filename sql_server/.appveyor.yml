@@ -6,8 +6,8 @@ platform:
   - x64
 
 install:
-  - cmd: SET PATH=C:\\Python%PYTHON%;c:\\Python%PYTHON%\\scripts;%PATH%
-  - cmd: git clone -q https://github.com/django/django C:\projects\django
+  - SET PATH=C:\\Python%PYTHON%;c:\\Python%PYTHON%\\scripts;%PATH%
+  - git clone -q https://github.com/django/django C:\projects\django
 
 test:
   - cmd: setx PYTHONPATH "C:\\projects\\django-pyodbc-azure"
