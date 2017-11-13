@@ -7,12 +7,11 @@ platform:
 
 install:
   - cmd: SET PATH=C:\\Python%PYTHON%;c:\\Python%PYTHON%\\scripts;%PATH%
-  - cmd: git clone -q https://github.com/django/django C:\projects\django
-  - cmd: pip install django
 
 build: off
 
 test_script:
-  - cmd: setx PYTHONPATH "C:\\projects\\django-pyodbc-azure; C:\\projects\\django"
-  - cmd: cd C:\projects\django\tests
-  - cmd: python runtests.py --settings=sql_server.settings expressions -v2
+  - ps: git clone -q https://github.com/django/django -b 1.11.6 C:\projects\django
+  - ps: SET PYTHONPATH="C:\\projects\\django-pyodbc-azure; C:\\projects\\django"
+  - ps: cd C:\projects\django\tests
+  - ps: python runtests.py --settings=sql_server.settings expressions -v2
