@@ -4,7 +4,7 @@ environment:
     - PYTHON: "27"
 
 platform:
-  - x32
+  - x86
 
 install:
   - cmd: SET PATH=C:\\Python%PYTHON%;c:\\Python%PYTHON%\\scripts;%PATH%
