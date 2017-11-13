@@ -1,4 +1,5 @@
 environment:
+  PYTHONPATH: C:\projects\django-pyodbc-azure;C:\projects\django
   matrix:
     - PYTHON: "27"
 
