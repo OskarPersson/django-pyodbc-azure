@@ -8,7 +8,7 @@ platform:
 
 install:
   - cmd: SET PATH=C:\\Python%PYTHON%;c:\\Python%PYTHON%\\scripts;%PATH%
-  - ps: git clone -b 1.11.6 https://github.com/django/django C:\projects\django
+  - ps: git clone -q -b 1.11.6 https://github.com/django/django C:\projects\django
 
 build: off
 
