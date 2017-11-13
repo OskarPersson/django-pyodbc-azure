@@ -1,0 +1,21 @@
+environment:
+
+  matrix:
+
+    - PYTHON: "27"
+    
+image: Visual Studio 2017
+
+platform:
+  - x64
+
+install:
+  - cmd: SET PATH=C:\\Python%PYTHON%;c:\\Python%PYTHON%\\scripts;%PATH%
+  - cmd: git clone -q https://github.com/django/django C:\projects\django
+
+test:
+  - cmd: setx PYTHONPATH "C:\\projects\\django-pyodbc-azure"
+  - cmd: cd C:\projects\django\tests
+  - cmd: python runtests.py --settings=sql_server.settings expressions -v2
+
+build: off
