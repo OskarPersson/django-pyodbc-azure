@@ -13,6 +13,6 @@ install:
 build: off
 
 test_script:
-  - cmd: setx PYTHONPATH "C:\\projects\\django-pyodbc-azure"
+  - cmd: setx PYTHONPATH "C:\\projects\\django-pyodbc-azure; C:\\projects\\django"
   - cmd: cd C:\projects\django\tests
   - cmd: python runtests.py --settings=sql_server.settings expressions -v2
